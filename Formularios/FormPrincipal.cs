@@ -17,6 +17,9 @@ namespace ProyectoFinalGasolinera
             InitializeComponent();
         }
 
-        
+        private void btnDclientes2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

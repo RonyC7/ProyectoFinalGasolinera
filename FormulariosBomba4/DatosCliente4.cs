@@ -16,5 +16,10 @@ namespace ProyectoFinalGasolinera.FormulariosBomba4
         {
             InitializeComponent();
         }
+
+        private void DatosCliente4_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

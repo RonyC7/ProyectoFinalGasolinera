@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoFinalGasolinera.FormulariosBomba3
+namespace ProyectoFinalGasolinera.FormulariosBomba4
 {
-    public partial class TipoAbastecimiento3 : Form
+    public partial class EstadoAbastecimiento4_1 : Form
     {
-        public TipoAbastecimiento3()
+        public EstadoAbastecimiento4_1()
         {
             InitializeComponent();
         }

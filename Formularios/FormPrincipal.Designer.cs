@@ -45,16 +45,12 @@
             this.labelEstado3 = new System.Windows.Forms.Label();
             this.labelEstado4 = new System.Windows.Forms.Label();
             this.btnDClientes1 = new System.Windows.Forms.Button();
-            this.btnTAbas1 = new System.Windows.Forms.Button();
             this.btnEAbas1 = new System.Windows.Forms.Button();
             this.btnDclientes2 = new System.Windows.Forms.Button();
-            this.btnTAbas2 = new System.Windows.Forms.Button();
             this.btnEAbas2 = new System.Windows.Forms.Button();
             this.Clientes3 = new System.Windows.Forms.Button();
-            this.btnTAbas3 = new System.Windows.Forms.Button();
             this.btnEAbas3 = new System.Windows.Forms.Button();
             this.btnClientes4 = new System.Windows.Forms.Button();
-            this.btnTAbas4 = new System.Windows.Forms.Button();
             this.btnEAbas4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnConfiguracion = new System.Windows.Forms.Button();
@@ -141,40 +137,44 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Orange;
             this.label5.Location = new System.Drawing.Point(444, 91);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 19);
+            this.label5.Size = new System.Drawing.Size(66, 23);
             this.label5.TabIndex = 8;
             this.label5.Text = "Estado";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1093, 91);
+            this.label6.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Orange;
+            this.label6.Location = new System.Drawing.Point(1054, 91);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 19);
+            this.label6.Size = new System.Drawing.Size(66, 23);
             this.label6.TabIndex = 9;
             this.label6.Text = "Estado";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Orange;
             this.label7.Location = new System.Drawing.Point(444, 381);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 19);
+            this.label7.Size = new System.Drawing.Size(66, 23);
             this.label7.TabIndex = 10;
             this.label7.Text = "Estado";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1094, 381);
+            this.label8.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Orange;
+            this.label8.Location = new System.Drawing.Point(1054, 385);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 19);
+            this.label8.Size = new System.Drawing.Size(66, 23);
             this.label8.TabIndex = 11;
             this.label8.Text = "Estado";
             // 
@@ -190,7 +190,7 @@
             // labelEstado2
             // 
             this.labelEstado2.AutoSize = true;
-            this.labelEstado2.Location = new System.Drawing.Point(1093, 121);
+            this.labelEstado2.Location = new System.Drawing.Point(1054, 121);
             this.labelEstado2.Name = "labelEstado2";
             this.labelEstado2.Size = new System.Drawing.Size(55, 13);
             this.labelEstado2.TabIndex = 13;
@@ -208,7 +208,7 @@
             // labelEstado4
             // 
             this.labelEstado4.AutoSize = true;
-            this.labelEstado4.Location = new System.Drawing.Point(1094, 408);
+            this.labelEstado4.Location = new System.Drawing.Point(1054, 412);
             this.labelEstado4.Name = "labelEstado4";
             this.labelEstado4.Size = new System.Drawing.Size(55, 13);
             this.labelEstado4.TabIndex = 15;
@@ -223,24 +223,10 @@
             this.btnDClientes1.ForeColor = System.Drawing.Color.White;
             this.btnDClientes1.Location = new System.Drawing.Point(96, 242);
             this.btnDClientes1.Name = "btnDClientes1";
-            this.btnDClientes1.Size = new System.Drawing.Size(87, 47);
+            this.btnDClientes1.Size = new System.Drawing.Size(116, 47);
             this.btnDClientes1.TabIndex = 16;
             this.btnDClientes1.Text = "Datos Cliente";
             this.btnDClientes1.UseVisualStyleBackColor = false;
-            // 
-            // btnTAbas1
-            // 
-            this.btnTAbas1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnTAbas1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.btnTAbas1.FlatAppearance.BorderSize = 2;
-            this.btnTAbas1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTAbas1.ForeColor = System.Drawing.Color.White;
-            this.btnTAbas1.Location = new System.Drawing.Point(215, 242);
-            this.btnTAbas1.Name = "btnTAbas1";
-            this.btnTAbas1.Size = new System.Drawing.Size(90, 47);
-            this.btnTAbas1.TabIndex = 17;
-            this.btnTAbas1.Text = "Tipo de abastecimiento";
-            this.btnTAbas1.UseVisualStyleBackColor = false;
             // 
             // btnEAbas1
             // 
@@ -249,9 +235,9 @@
             this.btnEAbas1.FlatAppearance.BorderSize = 2;
             this.btnEAbas1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEAbas1.ForeColor = System.Drawing.Color.White;
-            this.btnEAbas1.Location = new System.Drawing.Point(334, 242);
+            this.btnEAbas1.Location = new System.Drawing.Point(294, 242);
             this.btnEAbas1.Name = "btnEAbas1";
-            this.btnEAbas1.Size = new System.Drawing.Size(96, 47);
+            this.btnEAbas1.Size = new System.Drawing.Size(136, 47);
             this.btnEAbas1.TabIndex = 18;
             this.btnEAbas1.Text = "Estado de abastecimiento";
             this.btnEAbas1.UseVisualStyleBackColor = false;
@@ -265,24 +251,11 @@
             this.btnDclientes2.ForeColor = System.Drawing.Color.White;
             this.btnDclientes2.Location = new System.Drawing.Point(702, 242);
             this.btnDclientes2.Name = "btnDclientes2";
-            this.btnDclientes2.Size = new System.Drawing.Size(87, 47);
+            this.btnDclientes2.Size = new System.Drawing.Size(116, 47);
             this.btnDclientes2.TabIndex = 19;
             this.btnDclientes2.Text = "Datos Cliente";
             this.btnDclientes2.UseVisualStyleBackColor = false;
-            // 
-            // btnTAbas2
-            // 
-            this.btnTAbas2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnTAbas2.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.btnTAbas2.FlatAppearance.BorderSize = 2;
-            this.btnTAbas2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTAbas2.ForeColor = System.Drawing.Color.White;
-            this.btnTAbas2.Location = new System.Drawing.Point(821, 242);
-            this.btnTAbas2.Name = "btnTAbas2";
-            this.btnTAbas2.Size = new System.Drawing.Size(90, 47);
-            this.btnTAbas2.TabIndex = 20;
-            this.btnTAbas2.Text = "Tipo de abastecimiento";
-            this.btnTAbas2.UseVisualStyleBackColor = false;
+            this.btnDclientes2.Click += new System.EventHandler(this.btnDclientes2_Click);
             // 
             // btnEAbas2
             // 
@@ -291,9 +264,9 @@
             this.btnEAbas2.FlatAppearance.BorderSize = 2;
             this.btnEAbas2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEAbas2.ForeColor = System.Drawing.Color.White;
-            this.btnEAbas2.Location = new System.Drawing.Point(939, 242);
+            this.btnEAbas2.Location = new System.Drawing.Point(900, 242);
             this.btnEAbas2.Name = "btnEAbas2";
-            this.btnEAbas2.Size = new System.Drawing.Size(97, 47);
+            this.btnEAbas2.Size = new System.Drawing.Size(136, 47);
             this.btnEAbas2.TabIndex = 21;
             this.btnEAbas2.Text = "Estado de abastecimiento";
             this.btnEAbas2.UseVisualStyleBackColor = false;
@@ -307,24 +280,10 @@
             this.Clientes3.ForeColor = System.Drawing.Color.White;
             this.Clientes3.Location = new System.Drawing.Point(99, 523);
             this.Clientes3.Name = "Clientes3";
-            this.Clientes3.Size = new System.Drawing.Size(87, 44);
+            this.Clientes3.Size = new System.Drawing.Size(113, 44);
             this.Clientes3.TabIndex = 22;
             this.Clientes3.Text = "Datos Cliente";
             this.Clientes3.UseVisualStyleBackColor = false;
-            // 
-            // btnTAbas3
-            // 
-            this.btnTAbas3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnTAbas3.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.btnTAbas3.FlatAppearance.BorderSize = 2;
-            this.btnTAbas3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTAbas3.ForeColor = System.Drawing.Color.White;
-            this.btnTAbas3.Location = new System.Drawing.Point(224, 523);
-            this.btnTAbas3.Name = "btnTAbas3";
-            this.btnTAbas3.Size = new System.Drawing.Size(90, 44);
-            this.btnTAbas3.TabIndex = 23;
-            this.btnTAbas3.Text = "Tipo de abastecimiento";
-            this.btnTAbas3.UseVisualStyleBackColor = false;
             // 
             // btnEAbas3
             // 
@@ -333,9 +292,9 @@
             this.btnEAbas3.FlatAppearance.BorderSize = 2;
             this.btnEAbas3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEAbas3.ForeColor = System.Drawing.Color.White;
-            this.btnEAbas3.Location = new System.Drawing.Point(334, 523);
+            this.btnEAbas3.Location = new System.Drawing.Point(294, 523);
             this.btnEAbas3.Name = "btnEAbas3";
-            this.btnEAbas3.Size = new System.Drawing.Size(96, 44);
+            this.btnEAbas3.Size = new System.Drawing.Size(136, 44);
             this.btnEAbas3.TabIndex = 24;
             this.btnEAbas3.Text = "Estado de abastecimiento";
             this.btnEAbas3.UseVisualStyleBackColor = false;
@@ -349,24 +308,10 @@
             this.btnClientes4.ForeColor = System.Drawing.Color.White;
             this.btnClientes4.Location = new System.Drawing.Point(702, 523);
             this.btnClientes4.Name = "btnClientes4";
-            this.btnClientes4.Size = new System.Drawing.Size(87, 44);
+            this.btnClientes4.Size = new System.Drawing.Size(116, 44);
             this.btnClientes4.TabIndex = 25;
             this.btnClientes4.Text = "Datos Cliente";
             this.btnClientes4.UseVisualStyleBackColor = false;
-            // 
-            // btnTAbas4
-            // 
-            this.btnTAbas4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnTAbas4.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.btnTAbas4.FlatAppearance.BorderSize = 2;
-            this.btnTAbas4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTAbas4.ForeColor = System.Drawing.Color.White;
-            this.btnTAbas4.Location = new System.Drawing.Point(821, 523);
-            this.btnTAbas4.Name = "btnTAbas4";
-            this.btnTAbas4.Size = new System.Drawing.Size(90, 44);
-            this.btnTAbas4.TabIndex = 26;
-            this.btnTAbas4.Text = "Tipo de abastecimiento";
-            this.btnTAbas4.UseVisualStyleBackColor = false;
             // 
             // btnEAbas4
             // 
@@ -375,9 +320,9 @@
             this.btnEAbas4.FlatAppearance.BorderSize = 2;
             this.btnEAbas4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEAbas4.ForeColor = System.Drawing.Color.White;
-            this.btnEAbas4.Location = new System.Drawing.Point(939, 523);
+            this.btnEAbas4.Location = new System.Drawing.Point(900, 523);
             this.btnEAbas4.Name = "btnEAbas4";
-            this.btnEAbas4.Size = new System.Drawing.Size(97, 44);
+            this.btnEAbas4.Size = new System.Drawing.Size(136, 44);
             this.btnEAbas4.TabIndex = 27;
             this.btnEAbas4.Text = "Estado de abastecimiento";
             this.btnEAbas4.UseVisualStyleBackColor = false;
@@ -430,16 +375,12 @@
             this.Controls.Add(this.btnConfiguracion);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEAbas4);
-            this.Controls.Add(this.btnTAbas4);
             this.Controls.Add(this.btnClientes4);
             this.Controls.Add(this.btnEAbas3);
-            this.Controls.Add(this.btnTAbas3);
             this.Controls.Add(this.Clientes3);
             this.Controls.Add(this.btnEAbas2);
-            this.Controls.Add(this.btnTAbas2);
             this.Controls.Add(this.btnDclientes2);
             this.Controls.Add(this.btnEAbas1);
-            this.Controls.Add(this.btnTAbas1);
             this.Controls.Add(this.btnDClientes1);
             this.Controls.Add(this.labelEstado4);
             this.Controls.Add(this.labelEstado3);
@@ -486,16 +427,12 @@
         private System.Windows.Forms.Label labelEstado3;
         private System.Windows.Forms.Label labelEstado4;
         private System.Windows.Forms.Button btnDClientes1;
-        private System.Windows.Forms.Button btnTAbas1;
         private System.Windows.Forms.Button btnEAbas1;
         private System.Windows.Forms.Button btnDclientes2;
-        private System.Windows.Forms.Button btnTAbas2;
         private System.Windows.Forms.Button btnEAbas2;
         private System.Windows.Forms.Button Clientes3;
-        private System.Windows.Forms.Button btnTAbas3;
         private System.Windows.Forms.Button btnEAbas3;
         private System.Windows.Forms.Button btnClientes4;
-        private System.Windows.Forms.Button btnTAbas4;
         private System.Windows.Forms.Button btnEAbas4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnConfiguracion;
