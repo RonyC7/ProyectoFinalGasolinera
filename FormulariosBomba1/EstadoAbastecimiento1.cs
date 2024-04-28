@@ -16,5 +16,14 @@ namespace ProyectoFinalGasolinera.FormulariosBomba1
         {
             InitializeComponent();
         }
+
+        private void btncerrar1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            FormPrincipal formPrincipal = new FormPrincipal();
+
+            formPrincipal.Show();
+        }
     }
 }

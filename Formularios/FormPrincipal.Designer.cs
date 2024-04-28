@@ -227,6 +227,7 @@
             this.btnDClientes1.TabIndex = 16;
             this.btnDClientes1.Text = "Datos Cliente";
             this.btnDClientes1.UseVisualStyleBackColor = false;
+            this.btnDClientes1.Click += new System.EventHandler(this.btnDClientes1_Click);
             // 
             // btnEAbas1
             // 
@@ -241,6 +242,7 @@
             this.btnEAbas1.TabIndex = 18;
             this.btnEAbas1.Text = "Estado de abastecimiento";
             this.btnEAbas1.UseVisualStyleBackColor = false;
+            this.btnEAbas1.Click += new System.EventHandler(this.btnEAbas1_Click);
             // 
             // btnDclientes2
             // 
@@ -270,6 +272,7 @@
             this.btnEAbas2.TabIndex = 21;
             this.btnEAbas2.Text = "Estado de abastecimiento";
             this.btnEAbas2.UseVisualStyleBackColor = false;
+            this.btnEAbas2.Click += new System.EventHandler(this.btnEAbas2_Click);
             // 
             // Clientes3
             // 
@@ -284,6 +287,7 @@
             this.Clientes3.TabIndex = 22;
             this.Clientes3.Text = "Datos Cliente";
             this.Clientes3.UseVisualStyleBackColor = false;
+            this.Clientes3.Click += new System.EventHandler(this.Clientes3_Click);
             // 
             // btnEAbas3
             // 
@@ -298,6 +302,7 @@
             this.btnEAbas3.TabIndex = 24;
             this.btnEAbas3.Text = "Estado de abastecimiento";
             this.btnEAbas3.UseVisualStyleBackColor = false;
+            this.btnEAbas3.Click += new System.EventHandler(this.btnEAbas3_Click);
             // 
             // btnClientes4
             // 
@@ -312,6 +317,7 @@
             this.btnClientes4.TabIndex = 25;
             this.btnClientes4.Text = "Datos Cliente";
             this.btnClientes4.UseVisualStyleBackColor = false;
+            this.btnClientes4.Click += new System.EventHandler(this.btnClientes4_Click);
             // 
             // btnEAbas4
             // 
@@ -326,6 +332,7 @@
             this.btnEAbas4.TabIndex = 27;
             this.btnEAbas4.Text = "Estado de abastecimiento";
             this.btnEAbas4.UseVisualStyleBackColor = false;
+            this.btnEAbas4.Click += new System.EventHandler(this.btnEAbas4_Click);
             // 
             // label1
             // 
@@ -351,6 +358,7 @@
             this.btnConfiguracion.TabIndex = 29;
             this.btnConfiguracion.Text = "Configuracion";
             this.btnConfiguracion.UseVisualStyleBackColor = false;
+            this.btnConfiguracion.Click += new System.EventHandler(this.btnConfiguracion_Click);
             // 
             // btnEstadisticas
             // 
@@ -365,6 +373,7 @@
             this.btnEstadisticas.TabIndex = 30;
             this.btnEstadisticas.Text = "Estadisticas";
             this.btnEstadisticas.UseVisualStyleBackColor = false;
+            this.btnEstadisticas.Click += new System.EventHandler(this.btnEstadisticas_Click);
             // 
             // FormPrincipal
             // 

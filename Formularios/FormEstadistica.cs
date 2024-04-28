@@ -21,5 +21,14 @@ namespace ProyectoFinalGasolinera
         {
 
         }
+
+        private void btnCerrarEstadistica_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            FormPrincipal formPrincipal = new FormPrincipal();
+
+            formPrincipal.Show();
+        }
     }
 }

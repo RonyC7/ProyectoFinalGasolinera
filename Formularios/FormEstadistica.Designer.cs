@@ -55,11 +55,11 @@
             this.labelMenosUsada = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridViewAbasLLeno = new System.Windows.Forms.DataGridView();
-            this.dateTimePickerAbasTanqueLleno = new System.Windows.Forms.DateTimePicker();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateTimePickerAbasTanqueLleno = new System.Windows.Forms.DateTimePicker();
             this.buttonMAbasTanq = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCierreCajas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInformeAbaPrepa)).BeginInit();
@@ -86,6 +86,7 @@
             // 
             // dataGridViewCierreCajas
             // 
+            this.dataGridViewCierreCajas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dataGridViewCierreCajas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCierreCajas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -130,6 +131,7 @@
             this.btnCerrarEstadistica.TabIndex = 3;
             this.btnCerrarEstadistica.Text = "Cerrar";
             this.btnCerrarEstadistica.UseVisualStyleBackColor = false;
+            this.btnCerrarEstadistica.Click += new System.EventHandler(this.btnCerrarEstadistica_Click);
             // 
             // btnMostrarDCierre
             // 
@@ -158,6 +160,7 @@
             // 
             // dataGridViewInformeAbaPrepa
             // 
+            this.dataGridViewInformeAbaPrepa.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dataGridViewInformeAbaPrepa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewInformeAbaPrepa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column5,
@@ -286,6 +289,7 @@
             this.labelMenosUsada.Size = new System.Drawing.Size(80, 13);
             this.labelMenosUsada.TabIndex = 15;
             this.labelMenosUsada.Text = "Menos utilizada";
+            this.labelMenosUsada.Visible = false;
             // 
             // label4
             // 
@@ -300,6 +304,7 @@
             // 
             // dataGridViewAbasLLeno
             // 
+            this.dataGridViewAbasLLeno.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dataGridViewAbasLLeno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAbasLLeno.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column9,
@@ -310,13 +315,6 @@
             this.dataGridViewAbasLLeno.Name = "dataGridViewAbasLLeno";
             this.dataGridViewAbasLLeno.Size = new System.Drawing.Size(494, 89);
             this.dataGridViewAbasLLeno.TabIndex = 17;
-            // 
-            // dateTimePickerAbasTanqueLleno
-            // 
-            this.dateTimePickerAbasTanqueLleno.Location = new System.Drawing.Point(578, 209);
-            this.dateTimePickerAbasTanqueLleno.Name = "dateTimePickerAbasTanqueLleno";
-            this.dateTimePickerAbasTanqueLleno.Size = new System.Drawing.Size(494, 20);
-            this.dateTimePickerAbasTanqueLleno.TabIndex = 18;
             // 
             // Column9
             // 
@@ -337,6 +335,13 @@
             // 
             this.Column12.HeaderText = "Abastecimiento_Tlleno";
             this.Column12.Name = "Column12";
+            // 
+            // dateTimePickerAbasTanqueLleno
+            // 
+            this.dateTimePickerAbasTanqueLleno.Location = new System.Drawing.Point(578, 209);
+            this.dateTimePickerAbasTanqueLleno.Name = "dateTimePickerAbasTanqueLleno";
+            this.dateTimePickerAbasTanqueLleno.Size = new System.Drawing.Size(494, 20);
+            this.dateTimePickerAbasTanqueLleno.TabIndex = 18;
             // 
             // buttonMAbasTanq
             // 

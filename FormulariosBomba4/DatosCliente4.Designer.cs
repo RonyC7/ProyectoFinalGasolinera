@@ -158,6 +158,7 @@
             this.btnCerrar4.TabIndex = 11;
             this.btnCerrar4.Text = "Cerrar";
             this.btnCerrar4.UseVisualStyleBackColor = false;
+            this.btnCerrar4.Click += new System.EventHandler(this.btnCerrar4_Click);
             // 
             // DatosCliente4
             // 

@@ -99,6 +99,7 @@
             this.btncerrar1.TabIndex = 5;
             this.btncerrar1.Text = "Cerrar";
             this.btncerrar1.UseVisualStyleBackColor = false;
+            this.btncerrar1.Click += new System.EventHandler(this.btncerrar1_Click);
             // 
             // EstadoAbastecimiento1
             // 

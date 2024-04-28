@@ -158,6 +158,7 @@
             this.btnCerrar2.TabIndex = 12;
             this.btnCerrar2.Text = "Cerrar";
             this.btnCerrar2.UseVisualStyleBackColor = false;
+            this.btnCerrar2.Click += new System.EventHandler(this.btnCerrar2_Click);
             // 
             // DatosClientes2
             // 
