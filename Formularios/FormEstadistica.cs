@@ -16,5 +16,10 @@ namespace ProyectoFinalGasolinera
         {
             InitializeComponent();
         }
+
+        private void FormEstadistica_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

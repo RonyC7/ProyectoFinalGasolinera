@@ -40,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnCerrar1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -144,11 +145,26 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Cantidad de abastecimiento";
             // 
+            // btnCerrar1
+            // 
+            this.btnCerrar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCerrar1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.btnCerrar1.FlatAppearance.BorderSize = 2;
+            this.btnCerrar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar1.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar1.Location = new System.Drawing.Point(402, 23);
+            this.btnCerrar1.Name = "btnCerrar1";
+            this.btnCerrar1.Size = new System.Drawing.Size(109, 23);
+            this.btnCerrar1.TabIndex = 11;
+            this.btnCerrar1.Text = "Cerrar";
+            this.btnCerrar1.UseVisualStyleBackColor = false;
+            // 
             // DatosClientes1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(867, 254);
+            this.Controls.Add(this.btnCerrar1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -182,5 +198,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnCerrar1;
     }
 }

@@ -40,6 +40,7 @@
             this.buttonagregarC3 = new System.Windows.Forms.Button();
             this.comboBoxTcom3 = new System.Windows.Forms.ComboBox();
             this.comboBoxSaba3 = new System.Windows.Forms.ComboBox();
+            this.btnCerrar3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -144,11 +145,26 @@
             this.comboBoxSaba3.Size = new System.Drawing.Size(198, 21);
             this.comboBoxSaba3.TabIndex = 10;
             // 
+            // btnCerrar3
+            // 
+            this.btnCerrar3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCerrar3.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.btnCerrar3.FlatAppearance.BorderSize = 2;
+            this.btnCerrar3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar3.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar3.Location = new System.Drawing.Point(414, 18);
+            this.btnCerrar3.Name = "btnCerrar3";
+            this.btnCerrar3.Size = new System.Drawing.Size(96, 23);
+            this.btnCerrar3.TabIndex = 11;
+            this.btnCerrar3.Text = "Cerrar";
+            this.btnCerrar3.UseVisualStyleBackColor = false;
+            // 
             // DatosClientes3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(866, 253);
+            this.Controls.Add(this.btnCerrar3);
             this.Controls.Add(this.comboBoxSaba3);
             this.Controls.Add(this.comboBoxTcom3);
             this.Controls.Add(this.buttonagregarC3);
@@ -182,5 +198,6 @@
         private System.Windows.Forms.Button buttonagregarC3;
         private System.Windows.Forms.ComboBox comboBoxTcom3;
         private System.Windows.Forms.ComboBox comboBoxSaba3;
+        private System.Windows.Forms.Button btnCerrar3;
     }
 }

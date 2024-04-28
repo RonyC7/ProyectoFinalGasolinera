@@ -40,6 +40,7 @@
             this.textBoxCantidad4 = new System.Windows.Forms.TextBox();
             this.comboBoxTcom4 = new System.Windows.Forms.ComboBox();
             this.comboBoxSaba4 = new System.Windows.Forms.ComboBox();
+            this.btnCerrar4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,7 +108,7 @@
             this.btnagregarC4.FlatAppearance.BorderSize = 2;
             this.btnagregarC4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnagregarC4.ForeColor = System.Drawing.Color.White;
-            this.btnagregarC4.Location = new System.Drawing.Point(375, 178);
+            this.btnagregarC4.Location = new System.Drawing.Point(387, 178);
             this.btnagregarC4.Name = "btnagregarC4";
             this.btnagregarC4.Size = new System.Drawing.Size(95, 30);
             this.btnagregarC4.TabIndex = 6;
@@ -144,11 +145,26 @@
             this.comboBoxSaba4.Size = new System.Drawing.Size(192, 21);
             this.comboBoxSaba4.TabIndex = 10;
             // 
+            // btnCerrar4
+            // 
+            this.btnCerrar4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCerrar4.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.btnCerrar4.FlatAppearance.BorderSize = 2;
+            this.btnCerrar4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar4.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar4.Location = new System.Drawing.Point(387, 26);
+            this.btnCerrar4.Name = "btnCerrar4";
+            this.btnCerrar4.Size = new System.Drawing.Size(95, 23);
+            this.btnCerrar4.TabIndex = 11;
+            this.btnCerrar4.Text = "Cerrar";
+            this.btnCerrar4.UseVisualStyleBackColor = false;
+            // 
             // DatosCliente4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(810, 220);
+            this.Controls.Add(this.btnCerrar4);
             this.Controls.Add(this.comboBoxSaba4);
             this.Controls.Add(this.comboBoxTcom4);
             this.Controls.Add(this.textBoxCantidad4);
@@ -183,5 +199,6 @@
         private System.Windows.Forms.TextBox textBoxCantidad4;
         private System.Windows.Forms.ComboBox comboBoxTcom4;
         private System.Windows.Forms.ComboBox comboBoxSaba4;
+        private System.Windows.Forms.Button btnCerrar4;
     }
 }
