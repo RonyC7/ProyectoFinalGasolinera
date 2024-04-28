@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoFinalGasolinera
+namespace ProyectoFinalGasolinera.FormulariosBomba4
 {
-    public partial class FormPrincipal : Form
+    public partial class TipoAbastecimiento4 : Form
     {
-        public FormPrincipal()
+        public TipoAbastecimiento4()
         {
             InitializeComponent();
         }
-
-        
     }
 }

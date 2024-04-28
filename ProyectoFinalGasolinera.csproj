@@ -46,6 +46,78 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormulariosBomba1\DatosClientes1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosBomba1\DatosClientes1.Designer.cs">
+      <DependentUpon>DatosClientes1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosBomba1\EstadoAbastecimiento1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosBomba1\EstadoAbastecimiento1.Designer.cs">
+      <DependentUpon>EstadoAbastecimiento1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosBomba1\TipoAbastecimiento1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosBomba1\TipoAbastecimiento1.Designer.cs">
+      <DependentUpon>TipoAbastecimiento1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosBomba2\DatosClientes2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosBomba2\DatosClientes2.Designer.cs">
+      <DependentUpon>DatosClientes2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosBomba2\EstadoAbastecimiento2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosBomba2\EstadoAbastecimiento2.Designer.cs">
+      <DependentUpon>EstadoAbastecimiento2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosBomba2\TipoAbastecimiento2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosBomba2\TipoAbastecimiento2.Designer.cs">
+      <DependentUpon>TipoAbastecimiento2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosBomba3\DatosClientes3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosBomba3\DatosClientes3.Designer.cs">
+      <DependentUpon>DatosClientes3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosBomba3\EstadoAbastecimiento3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosBomba3\EstadoAbastecimiento3.Designer.cs">
+      <DependentUpon>EstadoAbastecimiento3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosBomba3\TipoAbastecimiento3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosBomba3\TipoAbastecimiento3.Designer.cs">
+      <DependentUpon>TipoAbastecimiento3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosBomba4\DatosCliente4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosBomba4\DatosCliente4.Designer.cs">
+      <DependentUpon>DatosCliente4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosBomba4\EstadoClientes4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosBomba4\EstadoClientes4.Designer.cs">
+      <DependentUpon>EstadoClientes4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosBomba4\TipoAbastecimiento4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosBomba4\TipoAbastecimiento4.Designer.cs">
+      <DependentUpon>TipoAbastecimiento4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
