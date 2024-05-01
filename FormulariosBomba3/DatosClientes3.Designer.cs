@@ -128,6 +128,7 @@
             this.buttonagregarC3.TabIndex = 8;
             this.buttonagregarC3.Text = "Guardar Datos";
             this.buttonagregarC3.UseVisualStyleBackColor = false;
+            this.buttonagregarC3.Click += new System.EventHandler(this.buttonagregarC3_Click);
             // 
             // comboBoxTcom3
             // 
