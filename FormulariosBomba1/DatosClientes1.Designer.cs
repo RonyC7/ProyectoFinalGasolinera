@@ -84,6 +84,7 @@
             this.btnagregarC1.TabIndex = 3;
             this.btnagregarC1.Text = "Guardar Datos";
             this.btnagregarC1.UseVisualStyleBackColor = false;
+            this.btnagregarC1.Click += new System.EventHandler(this.btnagregarC1_Click);
             // 
             // label2
             // 
