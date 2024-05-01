@@ -36,11 +36,11 @@ namespace ProyectoFinalGasolinera.FormulariosBomba1
             if (tipoAbastecimiento == "Tanque Lleno")
             {
                 cantidadAbastecimiento = 1000; // Máximo 1000 litros
-                textBoxCantidad1.Enabled = false; 
+                textBoxCantidad1.Enabled = false;
             }
             else if (tipoAbastecimiento == "Seleccionar Cantidad de abastecimiento")
             {
-                textBoxCantidad1.Enabled = true; 
+                textBoxCantidad1.Enabled = true;
 
                 if (!double.TryParse(textBoxCantidad1.Text, out cantidadAbastecimiento))
                 {
@@ -51,7 +51,7 @@ namespace ProyectoFinalGasolinera.FormulariosBomba1
 
             if (!string.IsNullOrEmpty(nombreCliente))
             {
-                string datosCliente = $"{nombreCliente},{tipoCombustible},{tipoAbastecimiento},{cantidadAbastecimiento}";
+                string datosCliente = $"{nombreCliente},{tipoCombustible},{tipoAbastecimiento},{cantidadAbastecimiento},{DateTime.Now}";
                 GuardarDatos(datosCliente);
 
                 MessageBox.Show("Datos del cliente agregados correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
