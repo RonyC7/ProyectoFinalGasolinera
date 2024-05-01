@@ -33,12 +33,15 @@
             this.pictureBoxSuper = new System.Windows.Forms.PictureBox();
             this.pictureBoxDiesel = new System.Windows.Forms.PictureBox();
             this.pictureBoxRegular = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtSuper = new System.Windows.Forms.TextBox();
+            this.txtDiesel = new System.Windows.Forms.TextBox();
+            this.txtRegular = new System.Windows.Forms.TextBox();
             this.btnGuardarPrecios = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCerrarConfi = new System.Windows.Forms.Button();
+            this.lblPrecioSuper = new System.Windows.Forms.Label();
+            this.lblPrecioDiesel = new System.Windows.Forms.Label();
+            this.lblPrecioRegular = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSuper)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiesel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRegular)).BeginInit();
@@ -86,26 +89,26 @@
             this.pictureBoxRegular.TabIndex = 3;
             this.pictureBoxRegular.TabStop = false;
             // 
-            // textBox1
+            // txtSuper
             // 
-            this.textBox1.Location = new System.Drawing.Point(30, 151);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(84, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtSuper.Location = new System.Drawing.Point(30, 187);
+            this.txtSuper.Name = "txtSuper";
+            this.txtSuper.Size = new System.Drawing.Size(84, 20);
+            this.txtSuper.TabIndex = 4;
             // 
-            // textBox2
+            // txtDiesel
             // 
-            this.textBox2.Location = new System.Drawing.Point(146, 151);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(84, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtDiesel.Location = new System.Drawing.Point(146, 187);
+            this.txtDiesel.Name = "txtDiesel";
+            this.txtDiesel.Size = new System.Drawing.Size(84, 20);
+            this.txtDiesel.TabIndex = 5;
             // 
-            // textBox3
+            // txtRegular
             // 
-            this.textBox3.Location = new System.Drawing.Point(266, 151);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(84, 20);
-            this.textBox3.TabIndex = 6;
+            this.txtRegular.Location = new System.Drawing.Point(266, 187);
+            this.txtRegular.Name = "txtRegular";
+            this.txtRegular.Size = new System.Drawing.Size(84, 20);
+            this.txtRegular.TabIndex = 6;
             // 
             // btnGuardarPrecios
             // 
@@ -114,12 +117,13 @@
             this.btnGuardarPrecios.FlatAppearance.BorderSize = 2;
             this.btnGuardarPrecios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarPrecios.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarPrecios.Location = new System.Drawing.Point(137, 177);
+            this.btnGuardarPrecios.Location = new System.Drawing.Point(137, 213);
             this.btnGuardarPrecios.Name = "btnGuardarPrecios";
             this.btnGuardarPrecios.Size = new System.Drawing.Size(103, 26);
             this.btnGuardarPrecios.TabIndex = 7;
             this.btnGuardarPrecios.Text = "Guardar Precios";
             this.btnGuardarPrecios.UseVisualStyleBackColor = false;
+            this.btnGuardarPrecios.Click += new System.EventHandler(this.btnGuardarPrecios_Click);
             // 
             // pictureBox1
             // 
@@ -146,17 +150,47 @@
             this.btnCerrarConfi.UseVisualStyleBackColor = false;
             this.btnCerrarConfi.Click += new System.EventHandler(this.btnCerrarConfi_Click);
             // 
+            // lblPrecioSuper
+            // 
+            this.lblPrecioSuper.AutoSize = true;
+            this.lblPrecioSuper.Location = new System.Drawing.Point(50, 153);
+            this.lblPrecioSuper.Name = "lblPrecioSuper";
+            this.lblPrecioSuper.Size = new System.Drawing.Size(35, 13);
+            this.lblPrecioSuper.TabIndex = 10;
+            this.lblPrecioSuper.Text = "label2";
+            // 
+            // lblPrecioDiesel
+            // 
+            this.lblPrecioDiesel.AutoSize = true;
+            this.lblPrecioDiesel.Location = new System.Drawing.Point(168, 153);
+            this.lblPrecioDiesel.Name = "lblPrecioDiesel";
+            this.lblPrecioDiesel.Size = new System.Drawing.Size(35, 13);
+            this.lblPrecioDiesel.TabIndex = 11;
+            this.lblPrecioDiesel.Text = "label3";
+            // 
+            // lblPrecioRegular
+            // 
+            this.lblPrecioRegular.AutoSize = true;
+            this.lblPrecioRegular.Location = new System.Drawing.Point(291, 153);
+            this.lblPrecioRegular.Name = "lblPrecioRegular";
+            this.lblPrecioRegular.Size = new System.Drawing.Size(35, 13);
+            this.lblPrecioRegular.TabIndex = 12;
+            this.lblPrecioRegular.Text = "label4";
+            // 
             // FormConfiguracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(708, 275);
+            this.Controls.Add(this.lblPrecioRegular);
+            this.Controls.Add(this.lblPrecioDiesel);
+            this.Controls.Add(this.lblPrecioSuper);
             this.Controls.Add(this.btnCerrarConfi);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnGuardarPrecios);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtRegular);
+            this.Controls.Add(this.txtDiesel);
+            this.Controls.Add(this.txtSuper);
             this.Controls.Add(this.pictureBoxRegular);
             this.Controls.Add(this.pictureBoxDiesel);
             this.Controls.Add(this.pictureBoxSuper);
@@ -179,11 +213,14 @@
         private System.Windows.Forms.PictureBox pictureBoxSuper;
         private System.Windows.Forms.PictureBox pictureBoxDiesel;
         private System.Windows.Forms.PictureBox pictureBoxRegular;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtSuper;
+        private System.Windows.Forms.TextBox txtDiesel;
+        private System.Windows.Forms.TextBox txtRegular;
         private System.Windows.Forms.Button btnGuardarPrecios;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCerrarConfi;
+        private System.Windows.Forms.Label lblPrecioSuper;
+        private System.Windows.Forms.Label lblPrecioDiesel;
+        private System.Windows.Forms.Label lblPrecioRegular;
     }
 }
