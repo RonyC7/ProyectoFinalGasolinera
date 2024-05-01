@@ -114,6 +114,7 @@
             this.btnagregarC4.TabIndex = 6;
             this.btnagregarC4.Text = "Guardar Datos";
             this.btnagregarC4.UseVisualStyleBackColor = false;
+            this.btnagregarC4.Click += new System.EventHandler(this.btnagregarC4_Click);
             // 
             // textBoxnombreC4
             // 
