@@ -33,7 +33,7 @@ namespace ProyectoFinalGasolinera
                 PreciosGasolina.Regular = double.Parse(txtRegular.Text);
 
                 GuardarPrecios();
-                CargarPrecios(); 
+                CargarPrecios();
                 MessageBox.Show("Precios guardados correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
@@ -58,9 +58,13 @@ namespace ProyectoFinalGasolinera
                         string[] precios = sr.ReadLine().Split(',');
                         if (precios.Length == 3)
                         {
-                            lblPrecioSuper.Text = $"Q {precios[0]}";
-                            lblPrecioDiesel.Text = $"Q {precios[1]}";
-                            lblPrecioRegular.Text = $"Q {precios[2]}";
+                            PreciosGasolina.Super = double.Parse(precios[0]);
+                            PreciosGasolina.Diesel = double.Parse(precios[1]);
+                            PreciosGasolina.Regular = double.Parse(precios[2]);
+
+                            lblPrecioSuper.Text = $"Q {PreciosGasolina.Super}";
+                            lblPrecioDiesel.Text = $"Q {PreciosGasolina.Diesel}";
+                            lblPrecioRegular.Text = $"Q {PreciosGasolina.Regular}";
                         }
                     }
                 }
@@ -77,7 +81,7 @@ namespace ProyectoFinalGasolinera
             {
                 using (StreamWriter sw = new StreamWriter(RutaArchivo))
                 {
-                    sw.WriteLine($"{txtSuper.Text},{txtDiesel.Text},{txtRegular.Text}");
+                    sw.WriteLine($"{PreciosGasolina.Super},{PreciosGasolina.Diesel},{PreciosGasolina.Regular}");
                 }
             }
             catch (Exception ex)
@@ -85,6 +89,5 @@ namespace ProyectoFinalGasolinera
                 MessageBox.Show($"Error al guardar los precios: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
     }
 }
