@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoFinalGasolinera.Clases;
+using System;
 using System.IO;
 using System.Windows.Forms;
 
@@ -16,6 +17,7 @@ namespace ProyectoFinalGasolinera
 
         private void btnCerrarConfi_Click(object sender, EventArgs e)
         {
+            GuardarPrecios();
             this.Close();
 
             FormPrincipal formPrincipal = new FormPrincipal();
@@ -26,17 +28,23 @@ namespace ProyectoFinalGasolinera
         {
             try
             {
-                lblPrecioSuper.Text = txtSuper.Text;
-                lblPrecioDiesel.Text = txtDiesel.Text;
-                lblPrecioRegular.Text = txtRegular.Text;
+                PreciosGasolina.Super = double.Parse(txtSuper.Text);
+                PreciosGasolina.Diesel = double.Parse(txtDiesel.Text);
+                PreciosGasolina.Regular = double.Parse(txtRegular.Text);
 
                 GuardarPrecios();
+                CargarPrecios(); 
                 MessageBox.Show("Precios guardados correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error al guardar los precios: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void FormConfiguracion_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            GuardarPrecios();
         }
 
         private void CargarPrecios()
@@ -50,9 +58,9 @@ namespace ProyectoFinalGasolinera
                         string[] precios = sr.ReadLine().Split(',');
                         if (precios.Length == 3)
                         {
-                            lblPrecioSuper.Text = precios[0];
-                            lblPrecioDiesel.Text = precios[1];
-                            lblPrecioRegular.Text = precios[2];
+                            lblPrecioSuper.Text = $"Q {precios[0]}";
+                            lblPrecioDiesel.Text = $"Q {precios[1]}";
+                            lblPrecioRegular.Text = $"Q {precios[2]}";
                         }
                     }
                 }
@@ -69,7 +77,7 @@ namespace ProyectoFinalGasolinera
             {
                 using (StreamWriter sw = new StreamWriter(RutaArchivo))
                 {
-                    sw.WriteLine($"{lblPrecioSuper.Text},{lblPrecioDiesel.Text},{lblPrecioRegular.Text}");
+                    sw.WriteLine($"{txtSuper.Text},{txtDiesel.Text},{txtRegular.Text}");
                 }
             }
             catch (Exception ex)
@@ -77,5 +85,6 @@ namespace ProyectoFinalGasolinera
                 MessageBox.Show($"Error al guardar los precios: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }
