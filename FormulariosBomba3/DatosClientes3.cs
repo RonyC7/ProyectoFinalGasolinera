@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoFinalGasolinera.Clases;
+using System;
 using System.IO;
 using System.Windows.Forms;
 
@@ -6,15 +7,37 @@ namespace ProyectoFinalGasolinera.FormulariosBomba3
 {
     public partial class DatosClientes3 : Form
     {
+        private double precioCombustible;
+
         public DatosClientes3()
         {
             InitializeComponent();
 
-            comboBoxTcom3.Items.AddRange(new string[] { "Super", "Power", "Diesel" });
-
+            comboBoxTcom3.Items.AddRange(new string[] { "Super", "Regular", "Diesel" });
             comboBoxSaba3.Items.AddRange(new string[] { "Tanque Lleno", "Seleccionar Cantidad de abastecimiento" });
-
             textBoxCantidad3.KeyPress += TextBoxCantidad3_KeyPress;
+
+            precioCombustible = PreciosGasolina.Super; 
+            comboBoxTcom3.SelectedIndexChanged += ComboBoxTcom3_SelectedIndexChanged;
+        }
+
+        private void ComboBoxTcom3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (comboBoxTcom3.SelectedItem?.ToString())
+            {
+                case "Super":
+                    precioCombustible = PreciosGasolina.Super;
+                    break;
+                case "Regular":
+                    precioCombustible = PreciosGasolina.Regular;
+                    break;
+                case "Diesel":
+                    precioCombustible = PreciosGasolina.Diesel;
+                    break;
+                default:
+                    precioCombustible = PreciosGasolina.Super;
+                    break;
+            }
         }
 
         private void btnCerrar3_Click(object sender, EventArgs e)
@@ -22,7 +45,6 @@ namespace ProyectoFinalGasolinera.FormulariosBomba3
             this.Close();
 
             FormPrincipal formPrincipal = new FormPrincipal();
-
             formPrincipal.Show();
         }
 
@@ -49,17 +71,17 @@ namespace ProyectoFinalGasolinera.FormulariosBomba3
                 }
             }
 
-            if (!string.IsNullOrEmpty(nombreCliente))
-            {
-                string datosCliente = $"{nombreCliente},{tipoCombustible},{tipoAbastecimiento},{cantidadAbastecimiento},{DateTime.Now}";
-                GuardarDatos(datosCliente);
+            double totalPagar = tipoAbastecimiento == "Tanque Lleno" ? precioCombustible * 1000 : precioCombustible * cantidadAbastecimiento;
 
-                MessageBox.Show("Datos del cliente agregados correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Por favor, ingrese un nombre de cliente válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            string mensaje = $"Nombre del cliente: {nombreCliente}\n" +
+                             $"Tipo de gasolina: {tipoCombustible}\n" +
+                             $"Tipo de abastecimiento: {tipoAbastecimiento}\n" +
+                             $"Cantidad de abastecimiento: {(tipoAbastecimiento == "Tanque Lleno" ? "Tanque Lleno (1000 litros)" : cantidadAbastecimiento.ToString())}\n" +
+                             $"Total a pagar: Q {totalPagar}";
+
+            MessageBox.Show(mensaje, "Resumen de la transacción", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            GuardarDatos($"{nombreCliente},{tipoCombustible},{tipoAbastecimiento},{cantidadAbastecimiento},{totalPagar},{DateTime.Now}");
         }
 
         private void GuardarDatos(string datosCliente)
