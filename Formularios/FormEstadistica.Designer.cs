@@ -146,6 +146,7 @@
             this.btnMostrarDCierre.TabIndex = 4;
             this.btnMostrarDCierre.Text = "Mostrar Datos";
             this.btnMostrarDCierre.UseVisualStyleBackColor = false;
+            this.btnMostrarDCierre.Click += new System.EventHandler(this.btnMostrarDCierre_Click);
             // 
             // label2
             // 
