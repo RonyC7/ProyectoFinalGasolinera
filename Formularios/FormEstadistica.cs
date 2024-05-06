@@ -2,6 +2,7 @@
 using System.Data;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace ProyectoFinalGasolinera
@@ -17,6 +18,7 @@ namespace ProyectoFinalGasolinera
         {
 
         }
+
         private void btnCerrarEstadistica_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -31,6 +33,7 @@ namespace ProyectoFinalGasolinera
             DateTime fechaSeleccionada = dateTimePickerCierreCajas.Value.Date;
 
             bool datosEncontrados = false;
+            decimal totalCierre = 0;
 
             string[] archivos = { "Bomba1.txt", "Bomba2.txt", "Bomba3.txt", "Bomba4.txt" };
             foreach (string archivo in archivos)
@@ -50,8 +53,12 @@ namespace ProyectoFinalGasolinera
                             {
                                 if (fechaRegistro.Date == fechaSeleccionada)
                                 {
-                                    dataGridViewCierreCajas.Rows.Add(datos[5], datos[4], datos[0], datos[3]);
-                                    datosEncontrados = true; 
+                                    if (decimal.TryParse(datos[4], out decimal precio))
+                                    {
+                                        dataGridViewCierreCajas.Rows.Add(datos[5], datos[4], datos[0], datos[3]);
+                                        datosEncontrados = true;
+                                        totalCierre += precio;
+                                    }
                                 }
                             }
                         }
@@ -62,6 +69,10 @@ namespace ProyectoFinalGasolinera
             if (!datosEncontrados)
             {
                 MessageBox.Show("No hay cierres de día disponibles para la fecha seleccionada.", "Sin datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show($"Cierre total del día: Q {totalCierre}", "Total del día", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
