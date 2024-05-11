@@ -329,6 +329,7 @@
             this.buttonMAbasTanq.TabIndex = 19;
             this.buttonMAbasTanq.Text = "Mostrar Datos";
             this.buttonMAbasTanq.UseVisualStyleBackColor = false;
+            this.buttonMAbasTanq.Click += new System.EventHandler(this.buttonMAbasTanq_Click);
             // 
             // Column5
             // 
@@ -372,7 +373,7 @@
             // 
             // Column12
             // 
-            this.Column12.HeaderText = "Abastecimiento_Tlleno";
+            this.Column12.HeaderText = "Abastecimiento_Lleno";
             this.Column12.MinimumWidth = 6;
             this.Column12.Name = "Column12";
             this.Column12.Width = 125;
