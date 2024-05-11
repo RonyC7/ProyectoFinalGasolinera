@@ -75,5 +75,57 @@ namespace ProyectoFinalGasolinera
                 MessageBox.Show($"Cierre total del día: Q {totalCierre}", "Total del día", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void buttonMAbasPre_Click(object sender, EventArgs e)
+        {
+            dataGridViewInformeAbaPrepa.Rows.Clear();
+
+            DateTime fechaSeleccionada = dateTimePickerInfoAbasPrepa.Value.Date;
+
+            bool datosEncontrados = false;
+
+            string[] archivos = { "Bomba1.txt", "Bomba2.txt", "Bomba3.txt", "Bomba4.txt" };
+            foreach (string archivo in archivos)
+            {
+                string rutaArchivo = Path.Combine(@"C:\Users\Rony\Documents\Año 2024 Semestres\Programacion III\Proyectos o ejercicios\ProyectoFinalGasolinera\ProyectoFinalGasolinera\bin\Debug", archivo);
+                string nombreBomba = Path.GetFileNameWithoutExtension(archivo);
+
+                if (File.Exists(rutaArchivo))
+                {
+                    string[] lineas = File.ReadAllLines(rutaArchivo);
+                    foreach (string linea in lineas)
+                    {
+                        string[] datos = linea.Split(',');
+
+                        if (datos.Length >= 6)
+                        {
+                            if (DateTime.TryParseExact(datos[5], "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime fechaRegistro))
+                            {
+                                if (fechaRegistro.Date == fechaSeleccionada)
+                                {
+                                    if (datos[2].Trim() == "Seleccionar Cantidad de abastecimiento")
+                                    {
+                                        string fecha = datos[5];
+                                        string nombreCliente = datos[0];
+                                        string abastecimientoPrepago = datos[3];
+
+                                        dataGridViewInformeAbaPrepa.Rows.Add(fecha, nombreCliente, abastecimientoPrepago, nombreBomba);
+                                        datosEncontrados = true;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            if (!datosEncontrados)
+            {
+                MessageBox.Show("No se encontraron abastecimientos prepagos para la fecha seleccionada.", "Sin datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+
+
     }
 }
