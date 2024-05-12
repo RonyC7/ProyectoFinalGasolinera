@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Globalization;
 using System.IO;
@@ -172,7 +173,95 @@ namespace ProyectoFinalGasolinera
 
         private void btnMostrarBombas_Click(object sender, EventArgs e)
         {
+            bool datosEncontrados = false;
+            Dictionary<string, int> conteoBombas = new Dictionary<string, int>();
 
+            string[] archivos = { "Bomba1.txt", "Bomba2.txt", "Bomba3.txt", "Bomba4.txt" };
+            foreach (string archivo in archivos)
+            {
+                string rutaArchivo = Path.Combine(@"C:\Users\Rony\Documents\Año 2024 Semestres\Programacion III\Proyectos o ejercicios\ProyectoFinalGasolinera\ProyectoFinalGasolinera\bin\Debug", archivo);
+                string nombreBomba = Path.GetFileNameWithoutExtension(archivo);
+                int contadorBomba = 0;
+
+                if (File.Exists(rutaArchivo))
+                {
+                    string[] lineas = File.ReadAllLines(rutaArchivo);
+                    foreach (string linea in lineas)
+                    {
+                        string[] datos = linea.Split(',');
+
+                        if (datos.Length >= 6 && datos[2].Trim() == "Tanque Lleno")
+                        {
+                            contadorBomba++;
+                            datosEncontrados = true;
+                        }
+                    }
+                }
+
+                conteoBombas.Add(nombreBomba, contadorBomba);
+            }
+
+            if (!datosEncontrados)
+            {
+                MessageBox.Show("No se encontraron abastecimientos de tanque lleno para ninguna bomba.", "Sin datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                string bombaMasUsada = conteoBombas.Aggregate((l, r) => l.Value > r.Value ? l : r).Key;
+
+                string bombaMenosUsada = conteoBombas.Aggregate((l, r) => l.Value < r.Value ? l : r).Key;
+
+                labelMasUsada.Text = bombaMasUsada;
+                labelMenosUsada.Text = bombaMenosUsada;
+            }
         }
+
+
+        private void btnActualizarBombas_Click(object sender, EventArgs e)
+        {
+            Dictionary<string, int> conteoBombas = new Dictionary<string, int>();
+
+            string[] archivos = { "Bomba1.txt", "Bomba2.txt", "Bomba3.txt", "Bomba4.txt" };
+            foreach (string archivo in archivos)
+            {
+                string rutaArchivo = Path.Combine(@"C:\Users\Rony\Documents\Año 2024 Semestres\Programacion III\Proyectos o ejercicios\ProyectoFinalGasolinera\ProyectoFinalGasolinera\bin\Debug", archivo);
+                string nombreBomba = Path.GetFileNameWithoutExtension(archivo);
+                int contadorBomba = 0;
+
+                if (File.Exists(rutaArchivo))
+                {
+                    string[] lineas = File.ReadAllLines(rutaArchivo);
+                    foreach (string linea in lineas)
+                    {
+                        string[] datos = linea.Split(',');
+
+                        if (datos.Length >= 6 && datos[2].Trim() == "Tanque Lleno")
+                        {
+                            contadorBomba++;
+                        }
+                    }
+                }
+                conteoBombas.Add(nombreBomba, contadorBomba);
+            }
+
+            if (conteoBombas.Count > 0)
+            {
+                string bombaMasUsada = conteoBombas.Aggregate((l, r) => l.Value > r.Value ? l : r).Key;
+
+                string bombaMenosUsada = conteoBombas.Aggregate((l, r) => l.Value < r.Value ? l : r).Key;
+
+                labelMasUsada.Text = bombaMasUsada;
+                labelMenosUsada.Text = bombaMenosUsada;
+
+                MessageBox.Show("Bombas actualizadas.", "Actualización exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No se encontraron datos de abastecimientos de tanque lleno.", "Sin datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+
+
     }
 }

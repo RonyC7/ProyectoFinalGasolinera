@@ -263,6 +263,7 @@
             this.btnActualizarBombas.TabIndex = 13;
             this.btnActualizarBombas.Text = "Actualizar Bombas";
             this.btnActualizarBombas.UseVisualStyleBackColor = false;
+            this.btnActualizarBombas.Click += new System.EventHandler(this.btnActualizarBombas_Click);
             // 
             // labelMasUsada
             // 
@@ -272,7 +273,6 @@
             this.labelMasUsada.Size = new System.Drawing.Size(68, 13);
             this.labelMasUsada.TabIndex = 14;
             this.labelMasUsada.Text = "Mas utilizada";
-            this.labelMasUsada.Visible = false;
             // 
             // labelMenosUsada
             // 
@@ -282,7 +282,6 @@
             this.labelMenosUsada.Size = new System.Drawing.Size(80, 13);
             this.labelMenosUsada.TabIndex = 15;
             this.labelMenosUsada.Text = "Menos utilizada";
-            this.labelMenosUsada.Visible = false;
             // 
             // label4
             // 
