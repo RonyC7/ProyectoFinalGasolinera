@@ -35,6 +35,9 @@
             this.labelMostrarCantidadA4 = new System.Windows.Forms.Label();
             this.labelMostrarCantidad4 = new System.Windows.Forms.Label();
             this.btncerrar4 = new System.Windows.Forms.Button();
+            this.labelEstado4 = new System.Windows.Forms.Label();
+            this.labelCantidadA4 = new System.Windows.Forms.Label();
+            this.labelCantidadS4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,11 +104,41 @@
             this.btncerrar4.UseVisualStyleBackColor = false;
             this.btncerrar4.Click += new System.EventHandler(this.btncerrar4_Click);
             // 
+            // labelEstado4
+            // 
+            this.labelEstado4.AutoSize = true;
+            this.labelEstado4.Location = new System.Drawing.Point(194, 93);
+            this.labelEstado4.Name = "labelEstado4";
+            this.labelEstado4.Size = new System.Drawing.Size(35, 13);
+            this.labelEstado4.TabIndex = 6;
+            this.labelEstado4.Text = "label2";
+            // 
+            // labelCantidadA4
+            // 
+            this.labelCantidadA4.AutoSize = true;
+            this.labelCantidadA4.Location = new System.Drawing.Point(194, 139);
+            this.labelCantidadA4.Name = "labelCantidadA4";
+            this.labelCantidadA4.Size = new System.Drawing.Size(35, 13);
+            this.labelCantidadA4.TabIndex = 7;
+            this.labelCantidadA4.Text = "label3";
+            // 
+            // labelCantidadS4
+            // 
+            this.labelCantidadS4.AutoSize = true;
+            this.labelCantidadS4.Location = new System.Drawing.Point(194, 187);
+            this.labelCantidadS4.Name = "labelCantidadS4";
+            this.labelCantidadS4.Size = new System.Drawing.Size(35, 13);
+            this.labelCantidadS4.TabIndex = 8;
+            this.labelCantidadS4.Text = "label4";
+            // 
             // EstadoAbastecimiento4_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 333);
+            this.Controls.Add(this.labelCantidadS4);
+            this.Controls.Add(this.labelCantidadA4);
+            this.Controls.Add(this.labelEstado4);
             this.Controls.Add(this.btncerrar4);
             this.Controls.Add(this.labelMostrarCantidad4);
             this.Controls.Add(this.labelMostrarCantidadA4);
@@ -129,5 +162,8 @@
         private System.Windows.Forms.Label labelMostrarCantidadA4;
         private System.Windows.Forms.Label labelMostrarCantidad4;
         private System.Windows.Forms.Button btncerrar4;
+        private System.Windows.Forms.Label labelEstado4;
+        private System.Windows.Forms.Label labelCantidadA4;
+        private System.Windows.Forms.Label labelCantidadS4;
     }
 }

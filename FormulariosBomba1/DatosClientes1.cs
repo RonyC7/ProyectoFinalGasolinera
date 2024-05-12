@@ -9,6 +9,7 @@ namespace ProyectoFinalGasolinera.FormulariosBomba1
     {
         private double precioGasolina; 
 
+
         public DatosClientes1()
         {
             InitializeComponent();
