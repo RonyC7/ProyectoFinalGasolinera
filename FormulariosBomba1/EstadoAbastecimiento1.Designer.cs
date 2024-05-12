@@ -35,6 +35,9 @@
             this.labelMostrarCantidadA1 = new System.Windows.Forms.Label();
             this.labelMostrarCantidadS1 = new System.Windows.Forms.Label();
             this.btncerrar1 = new System.Windows.Forms.Button();
+            this.labelEstado1 = new System.Windows.Forms.Label();
+            this.labelCantidadA1 = new System.Windows.Forms.Label();
+            this.labelCantidadS = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,11 +104,41 @@
             this.btncerrar1.UseVisualStyleBackColor = false;
             this.btncerrar1.Click += new System.EventHandler(this.btncerrar1_Click);
             // 
+            // labelEstado1
+            // 
+            this.labelEstado1.AutoSize = true;
+            this.labelEstado1.Location = new System.Drawing.Point(186, 88);
+            this.labelEstado1.Name = "labelEstado1";
+            this.labelEstado1.Size = new System.Drawing.Size(35, 13);
+            this.labelEstado1.TabIndex = 6;
+            this.labelEstado1.Text = "label2";
+            // 
+            // labelCantidadA1
+            // 
+            this.labelCantidadA1.AutoSize = true;
+            this.labelCantidadA1.Location = new System.Drawing.Point(186, 116);
+            this.labelCantidadA1.Name = "labelCantidadA1";
+            this.labelCantidadA1.Size = new System.Drawing.Size(35, 13);
+            this.labelCantidadA1.TabIndex = 7;
+            this.labelCantidadA1.Text = "label3";
+            // 
+            // labelCantidadS
+            // 
+            this.labelCantidadS.AutoSize = true;
+            this.labelCantidadS.Location = new System.Drawing.Point(186, 148);
+            this.labelCantidadS.Name = "labelCantidadS";
+            this.labelCantidadS.Size = new System.Drawing.Size(35, 13);
+            this.labelCantidadS.TabIndex = 8;
+            this.labelCantidadS.Text = "label4";
+            // 
             // EstadoAbastecimiento1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 331);
+            this.Controls.Add(this.labelCantidadS);
+            this.Controls.Add(this.labelCantidadA1);
+            this.Controls.Add(this.labelEstado1);
             this.Controls.Add(this.btncerrar1);
             this.Controls.Add(this.labelMostrarCantidadS1);
             this.Controls.Add(this.labelMostrarCantidadA1);
@@ -129,5 +162,8 @@
         private System.Windows.Forms.Label labelMostrarCantidadA1;
         private System.Windows.Forms.Label labelMostrarCantidadS1;
         private System.Windows.Forms.Button btncerrar1;
+        private System.Windows.Forms.Label labelEstado1;
+        private System.Windows.Forms.Label labelCantidadA1;
+        private System.Windows.Forms.Label labelCantidadS;
     }
 }

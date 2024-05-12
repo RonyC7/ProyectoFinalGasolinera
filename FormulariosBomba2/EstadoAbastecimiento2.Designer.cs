@@ -35,6 +35,9 @@
             this.labelMostrarCantidadA2 = new System.Windows.Forms.Label();
             this.labelMostrarCantidadS2 = new System.Windows.Forms.Label();
             this.btncerrar2 = new System.Windows.Forms.Button();
+            this.labelEstado2 = new System.Windows.Forms.Label();
+            this.labelCantidadA2 = new System.Windows.Forms.Label();
+            this.labelCantidadS2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,11 +104,41 @@
             this.btncerrar2.UseVisualStyleBackColor = false;
             this.btncerrar2.Click += new System.EventHandler(this.btncerrar2_Click);
             // 
+            // labelEstado2
+            // 
+            this.labelEstado2.AutoSize = true;
+            this.labelEstado2.Location = new System.Drawing.Point(216, 78);
+            this.labelEstado2.Name = "labelEstado2";
+            this.labelEstado2.Size = new System.Drawing.Size(35, 13);
+            this.labelEstado2.TabIndex = 6;
+            this.labelEstado2.Text = "label2";
+            // 
+            // labelCantidadA2
+            // 
+            this.labelCantidadA2.AutoSize = true;
+            this.labelCantidadA2.Location = new System.Drawing.Point(216, 123);
+            this.labelCantidadA2.Name = "labelCantidadA2";
+            this.labelCantidadA2.Size = new System.Drawing.Size(35, 13);
+            this.labelCantidadA2.TabIndex = 7;
+            this.labelCantidadA2.Text = "label3";
+            // 
+            // labelCantidadS2
+            // 
+            this.labelCantidadS2.AutoSize = true;
+            this.labelCantidadS2.Location = new System.Drawing.Point(216, 168);
+            this.labelCantidadS2.Name = "labelCantidadS2";
+            this.labelCantidadS2.Size = new System.Drawing.Size(35, 13);
+            this.labelCantidadS2.TabIndex = 8;
+            this.labelCantidadS2.Text = "label4";
+            // 
             // EstadoAbastecimiento2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 330);
+            this.Controls.Add(this.labelCantidadS2);
+            this.Controls.Add(this.labelCantidadA2);
+            this.Controls.Add(this.labelEstado2);
             this.Controls.Add(this.btncerrar2);
             this.Controls.Add(this.labelMostrarCantidadS2);
             this.Controls.Add(this.labelMostrarCantidadA2);
@@ -129,5 +162,8 @@
         private System.Windows.Forms.Label labelMostrarCantidadA2;
         private System.Windows.Forms.Label labelMostrarCantidadS2;
         private System.Windows.Forms.Button btncerrar2;
+        private System.Windows.Forms.Label labelEstado2;
+        private System.Windows.Forms.Label labelCantidadA2;
+        private System.Windows.Forms.Label labelCantidadS2;
     }
 }
