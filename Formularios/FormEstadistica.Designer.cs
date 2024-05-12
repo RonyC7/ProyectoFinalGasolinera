@@ -248,6 +248,7 @@
             this.btnMostrarBombas.TabIndex = 12;
             this.btnMostrarBombas.Text = "Mostrar Datos";
             this.btnMostrarBombas.UseVisualStyleBackColor = false;
+            this.btnMostrarBombas.Click += new System.EventHandler(this.btnMostrarBombas_Click);
             // 
             // btnActualizarBombas
             // 

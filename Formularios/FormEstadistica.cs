@@ -170,5 +170,9 @@ namespace ProyectoFinalGasolinera
             }
         }
 
+        private void btnMostrarBombas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
