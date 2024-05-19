@@ -37,7 +37,8 @@
             this.btncerrar1 = new System.Windows.Forms.Button();
             this.labelEstado1 = new System.Windows.Forms.Label();
             this.labelCantidadA1 = new System.Windows.Forms.Label();
-            this.labelCantidadS = new System.Windows.Forms.Label();
+            this.labelCantidadS1 = new System.Windows.Forms.Label();
+            this.btnMostrar1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,9 +110,9 @@
             this.labelEstado1.AutoSize = true;
             this.labelEstado1.Location = new System.Drawing.Point(186, 88);
             this.labelEstado1.Name = "labelEstado1";
-            this.labelEstado1.Size = new System.Drawing.Size(35, 13);
+            this.labelEstado1.Size = new System.Drawing.Size(56, 13);
             this.labelEstado1.TabIndex = 6;
-            this.labelEstado1.Text = "label2";
+            this.labelEstado1.Text = "Disponible";
             // 
             // labelCantidadA1
             // 
@@ -122,21 +123,38 @@
             this.labelCantidadA1.TabIndex = 7;
             this.labelCantidadA1.Text = "label3";
             // 
-            // labelCantidadS
+            // labelCantidadS1
             // 
-            this.labelCantidadS.AutoSize = true;
-            this.labelCantidadS.Location = new System.Drawing.Point(186, 148);
-            this.labelCantidadS.Name = "labelCantidadS";
-            this.labelCantidadS.Size = new System.Drawing.Size(35, 13);
-            this.labelCantidadS.TabIndex = 8;
-            this.labelCantidadS.Text = "label4";
+            this.labelCantidadS1.AutoSize = true;
+            this.labelCantidadS1.Location = new System.Drawing.Point(186, 148);
+            this.labelCantidadS1.Name = "labelCantidadS1";
+            this.labelCantidadS1.Size = new System.Drawing.Size(35, 13);
+            this.labelCantidadS1.TabIndex = 8;
+            this.labelCantidadS1.Text = "label4";
+            this.labelCantidadS1.Click += new System.EventHandler(this.labelCantidadS_Click);
+            // 
+            // btnMostrar1
+            // 
+            this.btnMostrar1.BackColor = System.Drawing.Color.Red;
+            this.btnMostrar1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.btnMostrar1.FlatAppearance.BorderSize = 2;
+            this.btnMostrar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrar1.ForeColor = System.Drawing.Color.White;
+            this.btnMostrar1.Location = new System.Drawing.Point(41, 293);
+            this.btnMostrar1.Name = "btnMostrar1";
+            this.btnMostrar1.Size = new System.Drawing.Size(98, 26);
+            this.btnMostrar1.TabIndex = 9;
+            this.btnMostrar1.Text = "Mostrar Datos";
+            this.btnMostrar1.UseVisualStyleBackColor = false;
+            this.btnMostrar1.Click += new System.EventHandler(this.btnMostrar1_Click);
             // 
             // EstadoAbastecimiento1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 331);
-            this.Controls.Add(this.labelCantidadS);
+            this.Controls.Add(this.btnMostrar1);
+            this.Controls.Add(this.labelCantidadS1);
             this.Controls.Add(this.labelCantidadA1);
             this.Controls.Add(this.labelEstado1);
             this.Controls.Add(this.btncerrar1);
@@ -164,6 +182,7 @@
         private System.Windows.Forms.Button btncerrar1;
         private System.Windows.Forms.Label labelEstado1;
         private System.Windows.Forms.Label labelCantidadA1;
-        private System.Windows.Forms.Label labelCantidadS;
+        private System.Windows.Forms.Label labelCantidadS1;
+        private System.Windows.Forms.Button btnMostrar1;
     }
 }
