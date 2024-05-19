@@ -36,14 +36,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.labelEstado1 = new System.Windows.Forms.Label();
-            this.labelEstado2 = new System.Windows.Forms.Label();
-            this.labelEstado3 = new System.Windows.Forms.Label();
-            this.labelEstado4 = new System.Windows.Forms.Label();
             this.btnDClientes1 = new System.Windows.Forms.Button();
             this.btnEAbas1 = new System.Windows.Forms.Button();
             this.btnDclientes2 = new System.Windows.Forms.Button();
@@ -133,86 +125,6 @@
             this.label4.Size = new System.Drawing.Size(75, 18);
             this.label4.TabIndex = 7;
             this.label4.Text = "Bomba 4";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Orange;
-            this.label5.Location = new System.Drawing.Point(444, 91);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 23);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Estado";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Orange;
-            this.label6.Location = new System.Drawing.Point(1054, 91);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 23);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Estado";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Orange;
-            this.label7.Location = new System.Drawing.Point(444, 381);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 23);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Estado";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Orange;
-            this.label8.Location = new System.Drawing.Point(1054, 385);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 23);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Estado";
-            // 
-            // labelEstado1
-            // 
-            this.labelEstado1.AutoSize = true;
-            this.labelEstado1.Location = new System.Drawing.Point(444, 121);
-            this.labelEstado1.Name = "labelEstado1";
-            this.labelEstado1.Size = new System.Drawing.Size(55, 13);
-            this.labelEstado1.TabIndex = 12;
-            this.labelEstado1.Text = "En espera";
-            // 
-            // labelEstado2
-            // 
-            this.labelEstado2.AutoSize = true;
-            this.labelEstado2.Location = new System.Drawing.Point(1054, 121);
-            this.labelEstado2.Name = "labelEstado2";
-            this.labelEstado2.Size = new System.Drawing.Size(55, 13);
-            this.labelEstado2.TabIndex = 13;
-            this.labelEstado2.Text = "En espera";
-            // 
-            // labelEstado3
-            // 
-            this.labelEstado3.AutoSize = true;
-            this.labelEstado3.Location = new System.Drawing.Point(444, 408);
-            this.labelEstado3.Name = "labelEstado3";
-            this.labelEstado3.Size = new System.Drawing.Size(55, 13);
-            this.labelEstado3.TabIndex = 14;
-            this.labelEstado3.Text = "En espera";
-            // 
-            // labelEstado4
-            // 
-            this.labelEstado4.AutoSize = true;
-            this.labelEstado4.Location = new System.Drawing.Point(1054, 412);
-            this.labelEstado4.Name = "labelEstado4";
-            this.labelEstado4.Size = new System.Drawing.Size(55, 13);
-            this.labelEstado4.TabIndex = 15;
-            this.labelEstado4.Text = "En espera";
             // 
             // btnDClientes1
             // 
@@ -391,14 +303,6 @@
             this.Controls.Add(this.btnDclientes2);
             this.Controls.Add(this.btnEAbas1);
             this.Controls.Add(this.btnDClientes1);
-            this.Controls.Add(this.labelEstado4);
-            this.Controls.Add(this.labelEstado3);
-            this.Controls.Add(this.labelEstado2);
-            this.Controls.Add(this.labelEstado1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -427,14 +331,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label labelEstado1;
-        private System.Windows.Forms.Label labelEstado2;
-        private System.Windows.Forms.Label labelEstado3;
-        private System.Windows.Forms.Label labelEstado4;
         private System.Windows.Forms.Button btnDClientes1;
         private System.Windows.Forms.Button btnEAbas1;
         private System.Windows.Forms.Button btnDclientes2;

@@ -7,8 +7,9 @@ namespace ProyectoFinalGasolinera.FormulariosBomba1
 {
     public partial class DatosClientes1 : Form
     {
-        private double precioGasolina; 
+        private double precioGasolina;
 
+        public event EventHandler DatosClienteGuardado;
 
         public DatosClientes1()
         {
@@ -18,8 +19,9 @@ namespace ProyectoFinalGasolinera.FormulariosBomba1
             comboBoxSaba1.Items.AddRange(new string[] { "Tanque Lleno", "Seleccionar Cantidad de abastecimiento" });
             textBoxCantidad1.KeyPress += TextBoxCantidad1_KeyPress;
 
-            precioGasolina = PreciosGasolina.Super; 
+            precioGasolina = PreciosGasolina.Super;
             comboBoxTcom1.SelectedIndexChanged += ComboBoxTcom1_SelectedIndexChanged;
+            comboBoxSaba1.SelectedIndexChanged += ComboBoxSaba1_SelectedIndexChanged;
         }
 
         private void ComboBoxTcom1_SelectedIndexChanged(object sender, EventArgs e)
@@ -41,12 +43,24 @@ namespace ProyectoFinalGasolinera.FormulariosBomba1
             }
         }
 
+        private void ComboBoxSaba1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxSaba1.SelectedItem?.ToString() == "Tanque Lleno")
+            {
+                textBoxCantidad1.Text = "1000";
+                textBoxCantidad1.Enabled = false;
+            }
+            else
+            {
+                textBoxCantidad1.Text = "";
+                textBoxCantidad1.Enabled = true;
+            }
+        }
+
         private void btnCerrar1_Click(object sender, EventArgs e)
         {
             this.Close();
-
             FormPrincipal formPrincipal = new FormPrincipal();
-
             formPrincipal.Show();
         }
 
@@ -77,18 +91,23 @@ namespace ProyectoFinalGasolinera.FormulariosBomba1
                     return;
                 }
             }
+            else
+            {
+                cantidadAbastecimiento = 1000; 
+            }
 
-            double totalPagar = tipoAbastecimiento == "Tanque Lleno" ? precioGasolina * 1000 : precioGasolina * cantidadAbastecimiento;
+            double totalPagar = precioGasolina * cantidadAbastecimiento;
 
             string mensaje = $"Nombre del cliente: {nombreCliente}\n" +
                              $"Tipo de gasolina: {tipoCombustible}\n" +
                              $"Tipo de abastecimiento: {tipoAbastecimiento}\n" +
-                             $"Cantidad de abastecimiento: {(tipoAbastecimiento == "Tanque Lleno" ? "Tanque Lleno (1000 litros)" : cantidadAbastecimiento.ToString())}\n" +
+                             $"Cantidad de abastecimiento: {cantidadAbastecimiento}\n" +
                              $"Total a pagar: Q {totalPagar}";
 
             MessageBox.Show(mensaje, "Resumen de la transacción", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             GuardarDatos($"{nombreCliente},{tipoCombustible},{tipoAbastecimiento},{cantidadAbastecimiento},{totalPagar},{DateTime.Now}");
+            DatosClienteGuardado?.Invoke(this, EventArgs.Empty);
         }
 
         private void GuardarDatos(string datosCliente)
@@ -96,7 +115,6 @@ namespace ProyectoFinalGasolinera.FormulariosBomba1
             try
             {
                 string rutaArchivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Bomba1.txt");
-
                 using (StreamWriter sw = new StreamWriter(rutaArchivo, true))
                 {
                     sw.WriteLine(datosCliente);
