@@ -9,6 +9,8 @@ namespace ProyectoFinalGasolinera.FormulariosBomba4
     {
         private double precioCombustible;
 
+        public event EventHandler DatosClienteGuardado;
+
         public DatosCliente4()
         {
             InitializeComponent();
@@ -19,6 +21,7 @@ namespace ProyectoFinalGasolinera.FormulariosBomba4
 
             precioCombustible = PreciosGasolina.Super;
             comboBoxTcom4.SelectedIndexChanged += ComboBoxTcom4_SelectedIndexChanged;
+            comboBoxSaba4.SelectedIndexChanged += ComboBoxSaba4_SelectedIndexChanged;
         }
 
         private void ComboBoxTcom4_SelectedIndexChanged(object sender, EventArgs e)
@@ -40,10 +43,23 @@ namespace ProyectoFinalGasolinera.FormulariosBomba4
             }
         }
 
+        private void ComboBoxSaba4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxSaba4.SelectedItem?.ToString() == "Tanque Lleno")
+            {
+                textBoxCantidad4.Text = "1000";
+                textBoxCantidad4.Enabled = false;
+            }
+            else
+            {
+                textBoxCantidad4.Text = "";
+                textBoxCantidad4.Enabled = true;
+            }
+        }
+
         private void btnCerrar4_Click(object sender, EventArgs e)
         {
             this.Close();
-
             FormPrincipal formPrincipal = new FormPrincipal();
             formPrincipal.Show();
         }
@@ -55,33 +71,43 @@ namespace ProyectoFinalGasolinera.FormulariosBomba4
             string tipoAbastecimiento = comboBoxSaba4.SelectedItem?.ToString();
             double cantidadAbastecimiento = 0;
 
-            if (tipoAbastecimiento == "Tanque Lleno")
+            if (string.IsNullOrEmpty(nombreCliente))
             {
-                cantidadAbastecimiento = 1000; // Máximo 1000 litros
-                textBoxCantidad4.Enabled = false;
+                MessageBox.Show("Por favor, ingrese un nombre de cliente válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else if (tipoAbastecimiento == "Seleccionar Cantidad de abastecimiento")
-            {
-                textBoxCantidad4.Enabled = true;
 
-                if (!double.TryParse(textBoxCantidad4.Text, out cantidadAbastecimiento))
+            if (string.IsNullOrEmpty(tipoCombustible) || string.IsNullOrEmpty(tipoAbastecimiento))
+            {
+                MessageBox.Show("Por favor, seleccione un tipo de combustible y un tipo de abastecimiento.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (tipoAbastecimiento == "Seleccionar Cantidad de abastecimiento")
+            {
+                if (!double.TryParse(textBoxCantidad4.Text, out cantidadAbastecimiento) || cantidadAbastecimiento <= 0)
                 {
-                    MessageBox.Show("Por favor, ingrese una cantidad válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Por favor, ingrese una cantidad de abastecimiento válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }
+            else
+            {
+                cantidadAbastecimiento = 1000;
+            }
 
-            double totalPagar = tipoAbastecimiento == "Tanque Lleno" ? precioCombustible * 1000 : precioCombustible * cantidadAbastecimiento;
+            double totalPagar = precioCombustible * cantidadAbastecimiento;
 
             string mensaje = $"Nombre del cliente: {nombreCliente}\n" +
                              $"Tipo de gasolina: {tipoCombustible}\n" +
                              $"Tipo de abastecimiento: {tipoAbastecimiento}\n" +
-                             $"Cantidad de abastecimiento: {(tipoAbastecimiento == "Tanque Lleno" ? "Tanque Lleno (1000 litros)" : cantidadAbastecimiento.ToString())}\n" +
+                             $"Cantidad de abastecimiento: {cantidadAbastecimiento}\n" +
                              $"Total a pagar: Q {totalPagar}";
 
             MessageBox.Show(mensaje, "Resumen de la transacción", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             GuardarDatos($"{nombreCliente},{tipoCombustible},{tipoAbastecimiento},{cantidadAbastecimiento},{totalPagar},{DateTime.Now}");
+            DatosClienteGuardado?.Invoke(this, EventArgs.Empty);
         }
 
         private void DatosCliente4_Load(object sender, EventArgs e)
@@ -94,7 +120,6 @@ namespace ProyectoFinalGasolinera.FormulariosBomba4
             try
             {
                 string rutaArchivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Bomba4.txt");
-
                 using (StreamWriter sw = new StreamWriter(rutaArchivo, true))
                 {
                     sw.WriteLine(datosCliente);
