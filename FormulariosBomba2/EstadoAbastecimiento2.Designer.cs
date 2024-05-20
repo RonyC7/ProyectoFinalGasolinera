@@ -38,6 +38,7 @@
             this.labelEstado2 = new System.Windows.Forms.Label();
             this.labelCantidadA2 = new System.Windows.Forms.Label();
             this.labelCantidadS2 = new System.Windows.Forms.Label();
+            this.btnMostrar2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,9 +110,9 @@
             this.labelEstado2.AutoSize = true;
             this.labelEstado2.Location = new System.Drawing.Point(216, 78);
             this.labelEstado2.Name = "labelEstado2";
-            this.labelEstado2.Size = new System.Drawing.Size(35, 13);
+            this.labelEstado2.Size = new System.Drawing.Size(56, 13);
             this.labelEstado2.TabIndex = 6;
-            this.labelEstado2.Text = "label2";
+            this.labelEstado2.Text = "Disponible";
             // 
             // labelCantidadA2
             // 
@@ -131,11 +132,27 @@
             this.labelCantidadS2.TabIndex = 8;
             this.labelCantidadS2.Text = "label4";
             // 
+            // btnMostrar2
+            // 
+            this.btnMostrar2.BackColor = System.Drawing.Color.Red;
+            this.btnMostrar2.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.btnMostrar2.FlatAppearance.BorderSize = 2;
+            this.btnMostrar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrar2.ForeColor = System.Drawing.Color.White;
+            this.btnMostrar2.Location = new System.Drawing.Point(38, 295);
+            this.btnMostrar2.Name = "btnMostrar2";
+            this.btnMostrar2.Size = new System.Drawing.Size(95, 23);
+            this.btnMostrar2.TabIndex = 9;
+            this.btnMostrar2.Text = "Mostrar Datos";
+            this.btnMostrar2.UseVisualStyleBackColor = false;
+            this.btnMostrar2.Click += new System.EventHandler(this.btnMostrar2_Click);
+            // 
             // EstadoAbastecimiento2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 330);
+            this.Controls.Add(this.btnMostrar2);
             this.Controls.Add(this.labelCantidadS2);
             this.Controls.Add(this.labelCantidadA2);
             this.Controls.Add(this.labelEstado2);
@@ -165,5 +182,6 @@
         private System.Windows.Forms.Label labelEstado2;
         private System.Windows.Forms.Label labelCantidadA2;
         private System.Windows.Forms.Label labelCantidadS2;
+        private System.Windows.Forms.Button btnMostrar2;
     }
 }
