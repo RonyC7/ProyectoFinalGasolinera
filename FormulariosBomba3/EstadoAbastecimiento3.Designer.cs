@@ -38,6 +38,7 @@
             this.labelEstado3 = new System.Windows.Forms.Label();
             this.labelCantidadA3 = new System.Windows.Forms.Label();
             this.labelCantidadS3 = new System.Windows.Forms.Label();
+            this.btnMostrar3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,16 +108,16 @@
             // labelEstado3
             // 
             this.labelEstado3.AutoSize = true;
-            this.labelEstado3.Location = new System.Drawing.Point(207, 71);
+            this.labelEstado3.Location = new System.Drawing.Point(184, 71);
             this.labelEstado3.Name = "labelEstado3";
-            this.labelEstado3.Size = new System.Drawing.Size(35, 13);
+            this.labelEstado3.Size = new System.Drawing.Size(56, 13);
             this.labelEstado3.TabIndex = 6;
-            this.labelEstado3.Text = "label2";
+            this.labelEstado3.Text = "Disponible";
             // 
             // labelCantidadA3
             // 
             this.labelCantidadA3.AutoSize = true;
-            this.labelCantidadA3.Location = new System.Drawing.Point(206, 110);
+            this.labelCantidadA3.Location = new System.Drawing.Point(205, 110);
             this.labelCantidadA3.Name = "labelCantidadA3";
             this.labelCantidadA3.Size = new System.Drawing.Size(35, 13);
             this.labelCantidadA3.TabIndex = 7;
@@ -131,11 +132,27 @@
             this.labelCantidadS3.TabIndex = 8;
             this.labelCantidadS3.Text = "label4";
             // 
+            // btnMostrar3
+            // 
+            this.btnMostrar3.BackColor = System.Drawing.Color.Red;
+            this.btnMostrar3.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.btnMostrar3.FlatAppearance.BorderSize = 2;
+            this.btnMostrar3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrar3.ForeColor = System.Drawing.Color.White;
+            this.btnMostrar3.Location = new System.Drawing.Point(32, 293);
+            this.btnMostrar3.Name = "btnMostrar3";
+            this.btnMostrar3.Size = new System.Drawing.Size(95, 23);
+            this.btnMostrar3.TabIndex = 9;
+            this.btnMostrar3.Text = "Mostrar Datos";
+            this.btnMostrar3.UseVisualStyleBackColor = false;
+            this.btnMostrar3.Click += new System.EventHandler(this.btnMostrar3_Click);
+            // 
             // EstadoAbastecimiento3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 330);
+            this.Controls.Add(this.btnMostrar3);
             this.Controls.Add(this.labelCantidadS3);
             this.Controls.Add(this.labelCantidadA3);
             this.Controls.Add(this.labelEstado3);
@@ -165,5 +182,6 @@
         private System.Windows.Forms.Label labelEstado3;
         private System.Windows.Forms.Label labelCantidadA3;
         private System.Windows.Forms.Label labelCantidadS3;
+        private System.Windows.Forms.Button btnMostrar3;
     }
 }
